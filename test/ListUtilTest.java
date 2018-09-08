@@ -49,5 +49,34 @@ public class ListUtilTest {
 	}
 
 
-
+	//binarySearch test
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testBinaryElementIsNull(){
+		String[] array = {"a", "b", "c", "d"};
+		assertEquals(3, ListUtil.binarySearch(array, null));
+	}
+	
+	@Test
+	public void testBinaryOneElementArray(){
+		String[] array = {"a"};
+		assertEquals(0, ListUtil.binarySearch(array, "a"));
+		assertEquals(-1, ListUtil.binarySearch(array, "b"));
+	}
+	
+	@Test
+	public void testBinaryNormalArray(){
+		Double[] array = {0.0, 0.1, 0.2, 0.3, 0.4, 0.5};
+		assertEquals(0, ListUtil.binarySearch(array, 0.0));
+		assertEquals(3, ListUtil.binarySearch(array, 0.3));
+		assertEquals(5, ListUtil.binarySearch(array, 0.5));
+	}
+	
+	@Test
+	public void testBinarySameElementInArray(){
+		Integer[] array = {1, 2, 2, 3 ,4};
+		assertEquals(2, ListUtil.binarySearch(array, 2));
+	}
+	
+	
 }
