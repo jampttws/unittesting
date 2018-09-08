@@ -1,4 +1,4 @@
-##Count Unique
+## Count Unique
 > #### testNormalList 
     - count different value.
 > #### testListIsNull 
@@ -10,7 +10,7 @@
 >#### testEmptyList 
     - return 0 if it is an empty list.
 ---------------------
-##Binary Search
+## Binary Search
 >#### testBinaryElementIsNull 
     - throw IllegalArgumentException.
 >#### testBinaryOneElementArray 
